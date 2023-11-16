@@ -8,12 +8,32 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-      
+
+---
+
+spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://192.168.11.161:3306/vcls
     username: vcls
     password: neonex1!
+  config:
+    activate:
+      on-profile: dev
+
+---
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/vcls
+    username: root
+    password: 1234
+  config:
+    activate:
+      on-profile: local
+
+---
 
 mybatis:
   configuration:
