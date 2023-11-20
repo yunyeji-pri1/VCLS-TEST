@@ -27,6 +27,8 @@ dependencies {
     implementation 'org.apache.tiles:tiles-jsp:3.0.8'
     implementation 'org.apache.tiles:tiles-core:3.0.8'
     implementation 'org.apache.tiles:tiles-servlet:3.0.8'
+    // jsp reload
+    implementation 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('bootBuildImage') {
