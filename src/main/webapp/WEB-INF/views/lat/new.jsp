@@ -1,8 +1,34 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<script>
+
+function testajax(){
+	
+	var param ={};
+	
+	$.ajax({
+		type:"POST",
+	    contentType: "application/json",
+	    data: JSON.stringify(param),
+		url: "/aaa/bbb.json",
+        dataType: "json",
+        success: function(data){
+        	console.log(data);
+        }
+	})
+}
+
+$(document).ready(function () {
+// 	alert(${mv});
+	testajax();
+})
+
+
+</script>
 
 <h1>context</h1>
-
-<h3>calendar테스트</h3>
 
 <h3>daterangepicker - get date example</h3>
 <input type="text" name="datetimes" />
@@ -11,8 +37,6 @@
 
 <script>
 	$(document).ready(function () {
-
-		console.log("222");
 
 		$("input[name='datetimes']").daterangepicker(
 				{},

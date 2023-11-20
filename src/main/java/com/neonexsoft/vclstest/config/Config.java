@@ -1,13 +1,18 @@
 package com.neonexsoft.vclstest.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
+import com.neonexsoft.vclstest.interceptor.Interceptor;
+
 @Configuration
-public class Config {
+public class Config implements WebMvcConfigurer {
 	
 	@Bean
 	public TilesConfigurer tilesConfigurer() {
@@ -26,4 +31,18 @@ public class Config {
 		tilesView.setOrder(1);
 		return tilesView;
 	}
+	
+	@Autowired
+	Interceptor interceptor;
+	
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+	    registry.addInterceptor(interceptor)
+	        .addPathPatterns("/**");
+//	        .excludePathPatterns("/login")
+//	        .excludePathPatterns("/accounts")
+//	        .excludePathPatterns("public/error");
+	  }
+	
+	
 }
