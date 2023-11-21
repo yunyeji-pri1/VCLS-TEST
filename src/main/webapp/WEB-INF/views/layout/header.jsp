@@ -7,11 +7,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="robots" content="noindex, nofollow">
         <title>vcls 사이트</title>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/statid/js/daterangepicker.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/statid/js/jquery-3.6.0.min.js"  /></script>
+        <%--  순서  --%>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/moment.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/daterangepicker.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/daterangepicker.css">
     </head>
     <body>
-        <h1>header${pageContext.request.contextPath} ddd</h1>
+        <h1>header</h1>
     </body>
 </html>
 
