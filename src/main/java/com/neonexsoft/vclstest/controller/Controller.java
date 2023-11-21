@@ -16,6 +16,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.neonexsoft.vclstest.dto.TestDto;
 import com.neonexsoft.vclstest.service.TestService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 public class Controller {
 	
@@ -26,7 +29,8 @@ public class Controller {
 	public ModelAndView index(HttpServletRequest request) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
-		System.out.println("인터셉트 테스트");
+//		System.out.println("인터셉트 테스트");
+		log.info("=============Interceptor=============");
 		
 //		mv.addObject("mv",1111111);
 		mv.setViewName("lat/new");
@@ -35,7 +39,6 @@ public class Controller {
 	
 	@RequestMapping(value = "/aaa/bbb.json", method= {RequestMethod.GET,RequestMethod.POST})
 	public Map<String, Object> index(@RequestBody TestDto testdto , HttpServletRequest request) throws Exception {
-		System.out.println("21212");
 		Map<String, Object> mv = new HashMap<String, Object>();
 		List<TestDto> vo = testservice.listAll(testdto);
 		
