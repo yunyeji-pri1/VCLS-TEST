@@ -6,11 +6,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class MemberDto {
+    private String username;
+
     private int mbrInfoKey;
     private int deptKey;
     private int coKey;
     private String mbrPw;
-    private String mbrNm;
+//    private String mbrNm;
     private String mbrBrdt;
     private String mbrCi;
     private String mbrCd;
@@ -22,4 +24,8 @@ public class MemberDto {
     private String mdfrNm;
     private String mbrId;
     private String mdfcnYmdt;
+
 }
+
+
+
