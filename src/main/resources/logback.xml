@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+<!-- <configuration> -->
+	
+	<property name="APP_NAME" value="Web" />
+    <property name="LOG_HOME" value="/home/test/web/logs" />
+    <property name="PATTERN_BASE" value="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+
+	
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${PATTERN_BASE}</pattern>
+		</encoder>
+	</appender>
+	
+	
+	<appender name="FILE_STDOUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>true</prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/%d{yyyyMMdd}/${APP_NAME}.log
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${PATTERN_BASE}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+	</appender>
+	
+	<appender name="FILE_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>true</prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/%d{yyyyMMdd}/error/${APP_NAME}.error
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${PATTERN_BASE}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+	</appender>
+	
+<!-- 	<logger name="CONSOLE" level="INFO"> -->
+<!--     	<appender-ref ref="STDOUT" /> -->
+<!--     	<appender-ref ref="FILE_STDOUT" /> -->
+<!--     	<appender-ref ref="FILE_ERROR" /> -->
+<!-- 	</logger> -->
+	
+	<root level="INFO">
+	    <appender-ref ref="STDOUT" />
+    	<appender-ref ref="FILE_STDOUT" />
+    	<appender-ref ref="FILE_ERROR" />
+ 	</root>
+
+</configuration>

@@ -22,9 +22,9 @@ spring:
     url: jdbc:mariadb://192.168.11.161:3306/vcls
     username: vcls
     password: neonex1!
-  config:
-    activate:
-      on-profile: dev
+#  config:
+#    activate:
+#      on-profile: dev
 
 ---
 
