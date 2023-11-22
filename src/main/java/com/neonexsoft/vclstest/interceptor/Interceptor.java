@@ -1,5 +1,6 @@
 package com.neonexsoft.vclstest.interceptor;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,15 +17,16 @@ public class Interceptor implements HandlerInterceptor{
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		log.debug("================START================");
-		log.debug("Request URI :" + request.getRequestURI());
+		log.info("================START================");
+		log.info("Request URI :" + request.getRequestURI());
+		log.info("Request CODE : " + request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE));
 		return HandlerInterceptor.super.preHandle(request, response, handler);
 	}
 
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
-		log.debug("================END================");
+		log.info("================END================");
 		HandlerInterceptor.super.postHandle(request, response, handler, modelAndView);
 	}
 
