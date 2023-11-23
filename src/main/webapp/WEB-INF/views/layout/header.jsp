@@ -11,6 +11,7 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.12.4.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/moment.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/daterangepicker.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/ckeditor/ckeditor.js"></script>
 
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/daterangepicker.css">
     </head>
