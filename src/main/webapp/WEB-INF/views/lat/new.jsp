@@ -7,7 +7,7 @@
 function testajax(){
 	
 	var param ={};
-	
+
 	$.ajax({
 		type:"POST",
 	    contentType: "application/json",
@@ -49,12 +49,16 @@ function testCalrendar () {
 
 <h1>context</h1>
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<h3>popup test</h3>
 
 
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 <h3>daterangepicker example</h3>
 <input type="text" name="datetimes" />
 <p id="startDate">Start Date:</p>
 <p id="endDate">End Date:</p>
-
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-
+<h3>ckeditor example</h3>
+<textarea id = "editor4" name = "editor4"></textarea>
+<script>CKEDITOR.replace('editor4');</script>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
