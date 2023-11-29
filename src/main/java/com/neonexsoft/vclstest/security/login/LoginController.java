@@ -37,7 +37,7 @@ public class LoginController {
         String errorMsg = "";
         try {
             memberService.loginUser(user.getId(), user.getPassword());
-            return new ModelAndView("redirect:/admin/userList.action");
+            return new ModelAndView("/dashboard/liveDashboard");    //redirect 재확인필요
         } catch (Exception e) {
             e.printStackTrace();
             if(e.getMessage().equals(ErrorCode.TOKEN_EXPIRED.toString())) {
