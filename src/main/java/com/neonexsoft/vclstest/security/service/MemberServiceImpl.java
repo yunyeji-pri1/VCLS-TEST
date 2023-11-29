@@ -17,7 +17,8 @@ public class MemberServiceImpl implements MembersService{
     public void loginUser(String id, String password) throws Exception{
         Member member = (Member) memberDetailsService.loadUserByUsername(id);
         if(member==null) throw new UsernameNotFoundException("USER_NOT_FOUND");
-        BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder();
-        if(!bCrypt.matches(password, member.getPassword())) throw new BadCredentialsException("Bad_credentials");
+//        todo 비밀번호 암호화처리
+//        BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder();
+//        if(!bCrypt.matches(password, member.getPassword())) throw new BadCredentialsException("Bad_credentials");
     }
 }
