@@ -1,4 +1,4 @@
-package com.neonexsoft.vclstest.content.member.dto;
+package com.neonexsoft.vclstest.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

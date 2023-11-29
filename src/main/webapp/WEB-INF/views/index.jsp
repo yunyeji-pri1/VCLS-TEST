@@ -12,7 +12,7 @@
 <body>
 	<div>
 <!-- 		<script src="/style/vendor_components/moment/moment.js"></script> -->
-
+	
   		<tiles:insertAttribute name="header" />
 	  	<tiles:insertAttribute name="body"/>
   		<tiles:insertAttribute name="slide"/>

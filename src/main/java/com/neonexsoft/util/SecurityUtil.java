@@ -1,4 +1,4 @@
-package com.neonexsoft.vclstest.util;
+package com.neonexsoft.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
@@ -17,6 +17,7 @@ public class SecurityUtil {
         final Authentication authentication = SecurityContextHolder
                 .getContext().getAuthentication();
 
+        System.out.println(authentication + "확인 ----");
         if(authentication == null){
             log.debug("Security Context에 인증정보가 없습니다.");
             return Optional.empty();
