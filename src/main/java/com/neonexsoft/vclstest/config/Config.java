@@ -13,7 +13,7 @@ import com.neonexsoft.vclstest.interceptor.Interceptor;
 
 @Configuration
 public class Config implements WebMvcConfigurer {
-	
+
 	@Bean
 	public TilesConfigurer tilesConfigurer() {
 		final TilesConfigurer config = new TilesConfigurer();
@@ -23,7 +23,7 @@ public class Config implements WebMvcConfigurer {
 		config.setCheckRefresh(true);
 		return config;
 	}
-	
+
 	@Bean
 	public TilesViewResolver tilesViewResolver() {
 		final TilesViewResolver tilesView = new TilesViewResolver();
@@ -31,10 +31,9 @@ public class Config implements WebMvcConfigurer {
 		tilesView.setOrder(1);
 		return tilesView;
 	}
-	
 	@Autowired
 	Interceptor interceptor;
-	
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 	    registry.addInterceptor(interceptor)
@@ -43,6 +42,6 @@ public class Config implements WebMvcConfigurer {
 //	        .excludePathPatterns("/accounts")
 //	        .excludePathPatterns("public/error");
 	  }
-	
+
 	
 }
