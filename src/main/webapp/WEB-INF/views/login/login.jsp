@@ -17,7 +17,7 @@
                     <p class="ft-color__red ft-i__15 mt10">is not exist.</p>
                 </c:when>
                 <c:when test="${errorMsg eq 'Bad_credentials'}">
-                    <p class="ft-color__red ft-i__15 mt10">The ID or Password you entered is incorrect.</p>
+                    <p class="ft-color__red ft-i__15 mt10">아이디 또는 비밀번호를 잘못 입력했습니다. 입력하신 내용을 다시 확인해주세요.</p>
                 </c:when>
                 <c:when test="${errorMsg eq 'denied'}">
                     <p class="ft-color__red ft-i__15 mt10">You do not have access permission.</p>
