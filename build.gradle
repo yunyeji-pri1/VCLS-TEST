@@ -34,9 +34,13 @@ dependencies {
     implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
     //mybatis
 	implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2' 
-	
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+    // JWT
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
+    // security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
