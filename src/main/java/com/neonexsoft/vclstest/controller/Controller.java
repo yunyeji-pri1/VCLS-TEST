@@ -29,7 +29,6 @@ public class Controller {
 	public ModelAndView index(HttpServletRequest request) throws Exception {
 		ModelAndView mv = new ModelAndView();
 		
-//		System.out.println("인터셉트 테스트");
 		log.info("=============Interceptor=============");
 		
 //		mv.addObject("mv",1111111);

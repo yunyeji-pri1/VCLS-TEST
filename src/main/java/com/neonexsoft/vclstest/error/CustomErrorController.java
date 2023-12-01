@@ -19,7 +19,7 @@ public class CustomErrorController implements ErrorController{
 	public ModelAndView handleError(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView();
 		Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
-//		log.info("=====================" + (String) status);
+		log.info("===================== : " + status.toString());
 		
 		if(status != null) {
 			int statusCode = Integer.valueOf(status.toString());
